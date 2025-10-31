@@ -38,10 +38,13 @@ public class SalesContract extends Contract {
         isFinanced = financed;
     }
 
-    public double getTotalPrice(){
+    @Override
+    public double getTotalPrice() {
         return 0;
     }
-    public double getMonthlyPayment(){
+
+    @Override
+    public double getMonthlyPayment() {
         return 0;
     }
 
