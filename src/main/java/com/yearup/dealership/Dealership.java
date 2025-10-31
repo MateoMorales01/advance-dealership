@@ -1,7 +1,6 @@
 package com.yearup.dealership;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class Dealership {
     private String name;
@@ -15,7 +14,14 @@ public class Dealership {
         this.phone = phone;
         this.inventory = new ArrayList<>();
     }
-    public List<Vehicle> getVehiclesByPrice;
-    public List<Vehicle> getVehiclesByMakeModel;
-    public List<Vehicle> getVehiclesByYear;
+    public ArrayList<Vehicle> getAllVehicles() {
+        return inventory;
+    }
+
+    public void addVehicle(Vehicle vehicle){
+        this.inventory.add(vehicle);
+    }
+    public void removeVehicle(Vehicle vehicle){
+        this.inventory.remove(vehicle);
+    }
 }
