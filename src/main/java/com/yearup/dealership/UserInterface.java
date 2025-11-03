@@ -1,5 +1,6 @@
 package com.yearup.dealership;
 
+import java.time.LocalDate;
 import java.util.Scanner;
 
 public class UserInterface {
@@ -7,6 +8,11 @@ public class UserInterface {
     private Scanner scanner = new Scanner(System.in);
 
     public void display() {
+
+//        Vehicle vehicle = new Vehicle();
+        ContractDataManager contractDataManager = new ContractDataManager();
+        Contract contract = new MySalesContract();
+
         System.out.println("Dealership App");
 
         DealershipFileManager dealershipFileManager = new DealershipFileManager();
@@ -18,6 +24,12 @@ public class UserInterface {
         for (Vehicle vehicle : dealership.getAllVehicles()) {
             System.out.println(vehicle);
             System.out.println("---------------------------");
+        }
+    }
+
+    private static class MySalesContract extends SalesContract {
+        public MySalesContract() {
+            super(LocalDate.now(), "JohnDoe", "JohnDoe@Gmail.com", "Lexis LFA", );
         }
     }
 }
