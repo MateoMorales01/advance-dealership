@@ -9,6 +9,31 @@ public class UserInterface {
 
     public void display() {
 
+        boolean mainRunning = true;
+        mainRunning :
+        while (mainRunning) {
+            System.out.println("""
+                
+            1.Sales Contract
+            2.Find vehicles by make/model
+            3.Find vehicles by year range
+            4.Find vehicles by color
+            5.Find vehicles by mileage range
+            6.Find vehicles by type(car, truck, SUV, van)
+            7.List all vehicles
+            8.Add a vehicle
+            9.Remove a vehicle
+            10.Sales Contract""");
+
+            try {
+                String usersMainChoice = scanner.nextLine();
+                switch (usersMainChoice) {
+                    case "1" -> {
+
+                    }
+                }
+            }
+            }
 //        Vehicle vehicle = new Vehicle();
         ContractDataManager contractDataManager = new ContractDataManager();
         Contract contract = new MySalesContract();
