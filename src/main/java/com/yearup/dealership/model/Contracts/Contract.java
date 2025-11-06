@@ -1,4 +1,6 @@
-package com.yearup.dealership;
+package com.yearup.dealership.model.Contracts;
+
+import com.yearup.dealership.model.Vehicle;
 
 import java.time.LocalDate;
 
